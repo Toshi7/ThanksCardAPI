@@ -33,7 +33,7 @@ namespace ThanksCardAPI
             // DB接続情報は appsettings.Development.json, appsettings.json に記載されている。
             services.AddDbContext<ApplicationContext>(opt =>
             {
-              opt.UseNpgsql(Configuration.GetConnectionString("ApplicationContext"));
+                opt.UseNpgsql("Host=localhost; Database=webapp3; Username=postgres; Password=admin");
             });
 
             // JSONシリアル化で循環参照を無視
